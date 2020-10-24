@@ -1,3 +1,4 @@
 node_modules
 cockroach.exe
 cockroach
+certs/gifted-ox-ca.crt
