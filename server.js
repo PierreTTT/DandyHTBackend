@@ -24,6 +24,8 @@ app.use(
 
 // REST API calls
 // User will park
+
+// Turn the tile Grey to Green Location
 app.post('/login', async (req,res)=>{
     console.log(req.body)
   const value =  await account.findOne({where:{
@@ -35,7 +37,6 @@ app.post('/login', async (req,res)=>{
     })
     return res.send(value)
 });
-
 
 
 
