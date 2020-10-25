@@ -2,3 +2,4 @@ node_modules
 cockroach.exe
 cockroach
 certs
+.env

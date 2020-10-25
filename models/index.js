@@ -1,7 +1,11 @@
 const Sequelize = require("sequelize");
 
 // Connect to CockroachDB through Sequelize.
-const sequelize = new Sequelize(
+
+let sequelize;
+if(process.env.NODE_ENV === 'production'){
+    
+ sequelize = new Sequelize(
   process.env.DATABASE_NAME,
   process.env.USERNAME,
   process.env.PASSWORD,
@@ -13,6 +17,12 @@ const sequelize = new Sequelize(
     },
   }
 );
+}else{
+    sequelize = new Sequelize("dandy", "root", "uchiha", {
+        dialect: "mysql",
+        host: "127.0.0.1",
+      });
+}
 const models = {
   account: sequelize.import("./account"),
   parkingspot: sequelize.import("./parkingspot"),

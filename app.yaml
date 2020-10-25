@@ -7,6 +7,7 @@ env_variables:
   DATABASE_NAME: dandydb
   CONNECTION_NAME: dandy-293601:northamerica-northeast1:dandydb
   DIALECT: mysql
+  NODE_ENV: production
 
 beta_settings:
   cloud_sql_instances: dandy-293601:northamerica-northeast1:dandydb
