@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RewardActivity">
+
+    <TextView
+        android:id="@+id/reward_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Reward"
+        android:textSize="36dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@+id/reward_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="You have: 16 points"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/free_coffee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borderline"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="1 Free coffee (100 pts)"
+        app:layout_constraintTop_toBottomOf="@+id/points"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/claim"/>
+
+    <TextView
+        android:id="@+id/claim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borderline"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="Claim"
+        app:layout_constraintTop_toBottomOf="@+id/points"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/free_pastry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borderline"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="1 Free pastry (200 pts)"
+        app:layout_constraintTop_toBottomOf="@+id/free_coffee"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/claimButton"/>
+
+    <TextView
+        android:id="@+id/claimButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borderline"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="Claim"
+        app:layout_constraintTop_toBottomOf="@+id/claim"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
