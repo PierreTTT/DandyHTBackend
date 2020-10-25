@@ -1,12 +1,18 @@
 const Sequelize = require("sequelize");
 
 // Connect to CockroachDB through Sequelize.
-const sequelize = new Sequelize("parking", "dandyuser", "test", {
-  host: "dandy-293601:northamerica-northeast1:dandydb",
-  dialect: "mysql",
-  port: 3306,
-  logging: false,
-});
+const sequelize = new Sequelize(
+  process.env.DATABASE_NAME,
+  process.env.USERNAME,
+  process.env.PASSWORD,
+  {
+    dialect: process.env.DIALECT,
+    host: `/cloudsql/${process.env.CONNECTION_NAME}`,
+    dialectOptions: {
+      socketPath: `/cloudsql/${process.env.CONNECTION_NAME}`,
+    },
+  }
+);
 const models = {
   account: sequelize.import("./account"),
   parkingspot: sequelize.import("./parkingspot"),

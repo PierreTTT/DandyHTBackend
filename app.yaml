@@ -1,1 +1,12 @@
-runtime: nodejs10
+runtime: nodejs
+env: flex
+
+env_variables:
+  USERNAME: dandyuser
+  PASSWORD: test
+  DATABASE_NAME: dandydb
+  CONNECTION_NAME: dandy-293601:northamerica-northeast1:dandydb
+  DIALECT: mysql
+
+beta_settings:
+  cloud_sql_instances: dandy-293601:northamerica-northeast1:dandydb
