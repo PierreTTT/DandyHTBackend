@@ -5,9 +5,9 @@ env_variables:
   USERNAME: dandyuser
   PASSWORD: test
   DATABASE_NAME: parking
-  CONNECTION_NAME: dandy-293601:northamerica-northeast1:dandydb
+  CONNECTION_NAME: dandyv2:us-central1:dandydb
   DIALECT: mysql
   NODE_ENV: production
 
 beta_settings:
-  cloud_sql_instances: dandy-293601:northamerica-northeast1:dandydb
+  cloud_sql_instances: dandyv2:us-central1:dandydb
