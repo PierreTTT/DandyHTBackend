@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
-
+const dotenv = require("dotenv");
+dotenv.config();
 // Connect to CockroachDB through Sequelize.
 
 let sequelize;
@@ -11,10 +12,8 @@ if(process.env.NODE_ENV === 'production'){
   process.env.PASSWORD,
   {
     dialect: process.env.DIALECT,
-    host: `/cloudsql/${process.env.CONNECTION_NAME}`,
-    dialectOptions: {
-      socketPath: `/cloudsql/${process.env.CONNECTION_NAME}`,
-    },
+    host: process.env.HOST,
+    port:3306
   }
 );
 }else{
