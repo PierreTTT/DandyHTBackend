@@ -11,7 +11,6 @@ var sequelize = new Sequelize('parking', 'dandyuser', 'test', {
 const models = {
     account: sequelize.import("./account"),
     parkingspot: sequelize.import("./parkingspot")
-
   };
   
   Object.keys(models).forEach((modelName) => {
