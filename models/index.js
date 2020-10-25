@@ -1,18 +1,11 @@
-var fs = require('fs');
-var Sequelize = require('sequelize-cockroachdb');
+var Sequelize = require('sequelize');
 
 // Connect to CockroachDB through Sequelize.
-var sequelize = new Sequelize('parking', 'testuser', 'testpassword', {
-    host:"gifted-ox-5wk.gcp-northamerica-northeast1.cockroachlabs.cloud",
-    dialect: 'postgres',
-    port: 26257,
+var sequelize = new Sequelize('parking', 'dandyuser', 'test', {
+    host:"dandy-293601:northamerica-northeast1:dandydb",
+    dialect: 'mysql',
+    port: 3306,
     logging: false,
-    dialectOptions: {
-        ssl: {
-            ca: fs.readFileSync('certs/gifted-ox-ca.crt')
-                .toString()
-        }
-    }
 });
 
 const models = {
